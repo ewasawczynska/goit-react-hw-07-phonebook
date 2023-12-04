@@ -1,26 +1,26 @@
-import { Button } from 'components/Button';
-import { StyledContact } from './Contacts.styled';
+// import { Button } from 'components/Button';
+// import { StyledContact } from './Contacts.styled';
 import PropTypes from 'prop-types';
-import { useSelector, useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/actions';
-import { getContacts, getFilters } from 'redux/selectors';
+// import { useSelector, useDispatch } from 'react-redux';
+// import { deleteContact } from 'redux/actions';
+// import { getContacts, getFilters } from 'redux/selectors';
 
 export const Contacts = () => {
-  const contacts = useSelector(getContacts);
-  const filter = useSelector(getFilters);
-  const dispatch = useDispatch();
+  // const contacts = useSelector(getContacts);
+  // const filter = useSelector(getFilters);
+  // const dispatch = useDispatch();
 
-  const getFilteredContacts = () => {
-    return contacts.filter(contact =>
-      contact.name?.toLowerCase().includes(filter.toLowerCase())
-    );
-  };
+  // const getFilteredContacts = () => {
+  //   return contacts.filter(contact =>
+  //     contact.name?.toLowerCase().includes(filter.toLowerCase())
+  //   );
+  // };
 
-  const filteredContacts = getFilteredContacts();
+  // const filteredContacts = getFilteredContacts();
 
   return (
     <ul>
-      {filteredContacts.map(contact => (
+      {/* {filteredContacts.map(contact => (
         <StyledContact key={contact.id}>
         {contact.name}: {contact.number}
         <Button
@@ -32,7 +32,7 @@ export const Contacts = () => {
           Delete
         </Button>
       </StyledContact>
-      ))}
+      ))} */}
     </ul>
   );
 }
