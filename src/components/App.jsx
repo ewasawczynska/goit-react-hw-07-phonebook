@@ -1,16 +1,21 @@
+import {
+  ContactForm,
+  Contacts,
+  Container,
+  InputFiltr,
+  Section,
+} from 'components';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Container>
+      <Section title={'Phonebook'}>
+        <ContactForm />
+      </Section>
+      <Section title={'Contacts'}>
+        <InputFiltr />
+        <Contacts />
+      </Section>
+    </Container>
   );
-};
+}
