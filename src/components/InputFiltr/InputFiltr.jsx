@@ -1,22 +1,20 @@
 import { InputFiltrStyled, LabelFiltrStyled } from './InputFiltr.styled';
-// import { useDispatch } from 'react-redux';
-// import { setFilter } from 'redux/actions';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeFilter } from '../../redux/contactsSlice';
+import { selectFilter } from '../../redux/selectors';
 
 export const InputFiltr = () => {
 
-  // const dispatch = useDispatch();
-
-  const handleFilterChange = e => {
-    // const newFilter = e.target.value;
-    // dispatch(setFilter(newFilter));
-  };
+  const dispatch = useDispatch();
+  const value = useSelector(selectFilter);
 
   return (
     <LabelFiltrStyled>
       Filtr contacts by name:
       <InputFiltrStyled
         type="text"
-        onChange={handleFilterChange}
+        value={value}
+        onChange={e => dispatch(changeFilter(e.target.value))}
         placeholder="enter name"
       />
     </LabelFiltrStyled>
